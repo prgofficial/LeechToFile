@@ -2,7 +2,7 @@
 
 ### A Telegram Torrent (and youtube-dl) Leecher based on [Pyrogram](https://github.com/pyrogram/pyrogram)
 
-### This is a leech to FILE repo! Leech to STREAM(video) availabe here > [LEECH TO STREAM](https://github.com/prgofficial/LeechToVideo)
+### This is a leech to FILE repo! Leech to STREAM(video) availabe here > [LEECH TO STREAM](https://github.com/prgofficial/LeechToStream)
 
 
 ## For Support join here [MoviezOnlySupport](https://telegram.dog/moviezonlysupport)
@@ -23,7 +23,7 @@
 
 ### The Easy Way
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/prgofficial/TorrentLeech-GDriVe)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/prgofficial/LeechToFile)
 
 
 ### The Legacy Way
