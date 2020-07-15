@@ -38,7 +38,7 @@ async def help_message_f(client, message):
     #message_id = 99
     # display the /help
     
-    await message.reply_text("""Hai Welcome To DX-GDrive Group! For Group Rules And Usage Limitations /rules and /usage.</a>""", disable_web_page_preview=True)
+    await message.reply_text("""No one gonna HELP here!! Leech if you KNOW :)</a>""", disable_web_page_preview=True)
 
 
 async def rename_message_f(client, message):
