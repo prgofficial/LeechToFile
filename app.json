@@ -75,7 +75,15 @@
     "YTDL_COMMAND": {
       "description": "Enter your custom ytdl command like ytdl1@urgroupname and so on. Default is /ytdl.",
       "required": false
-	},
+    },
+    "SAVE_THUMBNAIL": {
+      "description": "Enter your custom savethumbnail command like savethumb@urgroupname and so on. Default is /savethumbnail.",
+      "required": false
+    },
+    "CLEAR_THUMBNAIL": {
+      "description": "Enter your custom clearthumbnail command like clearthumb@urgroupname and so on. Default is /clearthumbnail.",
+      "required": false
+    },
     "CANCEL_COMMAND_G": {
       "description": "Enter your custom cancel command like cancel@urgroupname and so on. Default is /cancel.",
       "required": false
