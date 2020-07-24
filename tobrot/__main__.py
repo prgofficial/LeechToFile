@@ -26,13 +26,19 @@ from tobrot import (
     LEECH_COMMAND,
     YTDL_COMMAND,
     GLEECH_COMMAND,
-    TELEGRAM_LEECH_COMMAND_G
+    TELEGRAM_LEECH_COMMAND_G,
+    CANCEL_COMMAND_G,
+    GET_SIZE_G,
+    STATUS_COMMAND,
+    SAVE_THUMBNAIL,
+    CLEAR_THUMBNAIL
 )
 
 from pyrogram import Client, Filters, MessageHandler, CallbackQueryHandler
 
 from tobrot.plugins.new_join_fn import new_join_f, help_message_f, rename_message_f
 from tobrot.plugins.incoming_message_fn import incoming_message_f, incoming_youtube_dl_f, incoming_purge_message_f, incoming_gdrive_message_f
+from tobrot.plugins.rclone_size import check_size_g
 from tobrot.plugins.status_message_fn import (
     status_message_f,
     cancel_message_f,
@@ -67,23 +73,29 @@ if __name__ == "__main__" :
     )
     app.add_handler(incoming_message_handler)
     #
-    #incoming_gdrive_message_handler = MessageHandler(
-     #   incoming_gdrive_message_f,
-      #  filters=Filters.command([f"{GLEECH_COMMAND}"]) & Filters.chat(chats=AUTH_CHANNEL)
-    #)
-    #app.add_handler(incoming_gdrive_message_handler)
+#    incoming_gdrive_message_handler = MessageHandler(
+#        incoming_gdrive_message_f,
+#        filters=Filters.command([f"{GLEECH_COMMAND}"]) & Filters.chat(chats=AUTH_CHANNEL)
+#    )
+#    app.add_handler(incoming_gdrive_message_handler)
     #
-    #incoming_telegram_download_handler = MessageHandler(
-     #   down_load_media_f,
-      #  filters=Filters.command([f"{TELEGRAM_LEECH_COMMAND_G}"]) & Filters.chat(chats=AUTH_CHANNEL)
-    #)
-    #app.add_handler(incoming_telegram_download_handler)
+#    incoming_telegram_download_handler = MessageHandler(
+#        down_load_media_f,
+#        filters=Filters.command([f"{TELEGRAM_LEECH_COMMAND_G}"]) & Filters.chat(chats=AUTH_CHANNEL)
+#    )
+#    app.add_handler(incoming_telegram_download_handler)
     #
     incoming_purge_message_handler = MessageHandler(
         incoming_purge_message_f,
         filters=Filters.command(["purge"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_purge_message_handler)
+    #
+#    incoming_size_checker_handler = MessageHandler(
+#        check_size_g,
+#        filters=Filters.command([f"{GET_SIZE_G}"]) & Filters.chat(chats=AUTH_CHANNEL)
+#    )
+#    app.add_handler(incoming_size_checker_handler)
     #
     incoming_youtube_dl_handler = MessageHandler(
         incoming_youtube_dl_f,
@@ -93,13 +105,13 @@ if __name__ == "__main__" :
     #
     status_message_handler = MessageHandler(
         status_message_f,
-        filters=Filters.command(["status"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command([f"{STATUS_COMMAND}"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(status_message_handler)
     #
     cancel_message_handler = MessageHandler(
         cancel_message_f,
-        filters=Filters.command(["cancel"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command([f"{CANCEL_COMMAND_G}"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(cancel_message_handler)
     #
@@ -154,13 +166,13 @@ if __name__ == "__main__" :
     #
     save_thumb_nail_handler = MessageHandler(
         save_thumb_nail,
-        filters=Filters.command(["savethumb"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command([f"{SAVE_THUMBNAIL}"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(save_thumb_nail_handler)
     #
     clear_thumb_nail_handler = MessageHandler(
         clear_thumb_nail,
-        filters=Filters.command(["delthumb"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command([f"{CLEAR_THUMBNAIL}"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(clear_thumb_nail_handler)
     #

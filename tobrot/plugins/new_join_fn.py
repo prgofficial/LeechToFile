@@ -38,20 +38,20 @@ async def help_message_f(client, message):
     #message_id = 99
     # display the /help
     
-    await message.reply_text("""No one gonna HELP here!! Leech if you KNOW :)</a>""", disable_web_page_preview=True)
+    await message.reply_text("""No one gonna HELP here!! Leech if you KNOW :) .\n\n PORN LEECH = Instant BAN""", disable_web_page_preview=True)
 
 
 async def rename_message_f(client, message):
     inline_keyboard = []
     inline_keyboard.append([
         pyrogram.InlineKeyboardButton(
-            text="read this?",
-            url="https://t.me/keralagram/698909"
+            text="Read This for help!",
+            url="https://t.me/MoVieZoNlySupPoRt/4016"
         )
     ])
     reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
     await message.reply_text(
-        "please use @renamebot",
+        "Wrong way",
         quote=True,
         reply_markup=reply_markup
     )

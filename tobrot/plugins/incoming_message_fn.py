@@ -86,15 +86,17 @@ async def incoming_message_f(client, message):
             cf_name,
             is_unzip,
             is_unrar,
-            is_untar
+            is_untar,
+            message
         )
         if not sagtus:
             # if FAILED, display the error message
             await i_m_sefg.edit_text(err_message)
     else:
         await i_m_sefg.edit_text(
-            "Sorry,There Is An Error,Do Steps Properly"
-            )
+            "**FCUK**! wat have you entered. \nPlease read /help \n"
+            f"<b>API Error</b>: {cf_name}"
+        )
 #
 async def incoming_gdrive_message_f(client, message):
     """/gleech command"""
@@ -142,12 +144,14 @@ async def incoming_gdrive_message_f(client, message):
             cf_name,
             is_unzip,
             is_unrar,
-            is_untar
+            is_untar,
+            message
         )
     else:
         await i_m_sefg.edit_text(
-            "Sorry,There Is An Error,Do Steps Properly"
-            )
+            "**FCUK**! wat have you entered. \nPlease read /help \n"
+            f"<b>API Error</b>: {cf_name}"
+        )
 
 
 async def incoming_youtube_dl_f(client, message):
@@ -159,6 +163,10 @@ async def incoming_youtube_dl_f(client, message):
         message.reply_to_message, "YTDL"
     )
     LOGGER.info(dl_url)
+    if len(message.command) > 1:
+        if message.command[1] == "gdrive":
+            with open('blame_my_knowledge.txt', 'w+') as gg:
+                gg.write("I am noob and don't know what to do that's why I have did this")
     LOGGER.info(cf_name)
     if dl_url is not None:
         await i_m_sefg.edit_text("extracting links")
@@ -191,5 +199,6 @@ async def incoming_youtube_dl_f(client, message):
             )
     else:
         await i_m_sefg.edit_text(
-            "Sorry,There Is An Error,Do Steps Properly"
-             )
+            "**FCUK**! wat have you entered. \nPlease read /help \n"
+            f"<b>API Error</b>: {cf_name}"
+        )
