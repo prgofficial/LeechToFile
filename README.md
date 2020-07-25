@@ -11,6 +11,8 @@
 
 ### Credit goes to SpEcHiDe for his [Publicleech](https://github.com/SpEcHiDe/PublicLeech)
 
+### Thank [Gautam Kumar](https://github.com/gautamajay52/TorrentLeech-Gdrive) for the added Cool features 🤩
+
 ## Installing
 
 ### The Easy Way
