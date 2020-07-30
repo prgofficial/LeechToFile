@@ -46,3 +46,4 @@ class Config(object):
     STATUS_COMMAND = os.environ.get("STATUS_COMMAND", "status")
     SAVE_THUMBNAIL = os.environ.get("SAVE_THUMBNAIL", "savethumbnail")
     CLEAR_THUMBNAIL = os.environ.get("CLEAR_THUMBNAIL", "clearthumbnail")
+    CLEAR_UNDELETED = os.environ.get("CLEAR_UNDELETED", "clearall")
