@@ -91,6 +91,10 @@
     "CUSTOM_FILE_NAME": {
       "description": "fill with name u want to prefix the file name like ur channel username🙊, keep empty for do nothing, but add to ur config vars even without input.",
       "required": false
+    },
+    "CLEAR_UNDELETED": {
+      "description": "enter your custom clear command like clear@urgroupname. It clears the downloads which are not deleted automatically🙊, Default is /clearall.",
+      "required": false
     }
   },
   "addons": [
