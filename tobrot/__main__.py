@@ -84,7 +84,7 @@ if __name__ == "__main__" :
 #    incoming_telegram_download_handler = MessageHandler(
 #        down_load_media_f,
 #        filters=Filters.command([f"{TELEGRAM_LEECH_COMMAND_G}"]) & Filters.chat(chats=AUTH_CHANNEL)
-    )
+#    )
 #    app.add_handler(incoming_telegram_download_handler)
     #
     incoming_purge_message_handler = MessageHandler(
