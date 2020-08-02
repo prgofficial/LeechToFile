@@ -2,14 +2,22 @@
 
 ### A Telegram Torrent (and youtube-dl) Leecher based on [Pyrogram](https://github.com/pyrogram/pyrogram)
 
-### This is a leech to FILE repo! Leech to STREAM(video) availabe here > [LEECH TO STREAM](https://github.com/prgofficial/LeechToStream)
+## This is a leech to FILE repo! Leech to STREAM(video) availabe here > [LEECH TO STREAM](https://github.com/prgofficial/LeechToStream)
 
 
-## For Support join here [MoviezOnlySupport](https://telegram.dog/moviezonlysupport)
-## Working example group [Leech Here](https://telegram.dog/leechtorrentmoviesonly)
+### For Support join here [MoviezOnlySupport](https://telegram.dog/moviezonlysupport)
+### Working example group [Leech Here](https://telegram.dog/leechtorrentmoviesonly)
 
 
-### Credit goes to SpEcHiDe for his [Publicleech](https://github.com/SpEcHiDe/PublicLeech)
+# Benefits :-
+    ✓ Telegram Torrent/Directlink leecher with its unzipping, unrar and untar
+    ✓ Custom file name, thumbnail
+    ✓ Custom commands
+	✓ Added /clearall command to clear the downloads which are not deleted automatically.
+	✓ Added support for youtube playlist ( use /pytdl )
+
+
+### Credit goes to SpEcHiDe for his [Publicleech](https://github.com/SpEcHiDe/PublicLeech) repo
 
 ### Thank [Gautam Kumar](https://github.com/gautamajay52/TorrentLeech-Gdrive) for the added Cool features 🤩
 
@@ -25,10 +33,10 @@
 Simply clone the repository and run the main file:
 
 ```sh
-git clone https://github.com/SpEcHiDe/PublicLeech.git
-cd PublicLeech
-virtualenv -p /usr/bin/python3 venv
-. ./venv/bin/activate
+git clone https://github.com/prgofficial/LeechToFile
+cd LeechToFile
+virtualenv -p /usr/bin/python3 VENV
+. ./VENV/bin/activate
 pip install -r requirements.txt
 # <Create config.py appropriately>
 python3 -m tobrot

@@ -34,7 +34,7 @@
       "value": ""
     },
     "AUTH_CHANNEL": {
-      "description": "should be an integer. The BOT API ID of the Telegram Group, where the Leecher should work.",
+      "description": "should be an integer. The ID of the Telegram Group, where the Leecher should work.",
       "value": ""
     },
     "OWNER_ID": {
@@ -78,6 +78,10 @@
     },
     "YTDL_COMMAND": {
       "description": "Enter your custom ytdl command like ytdl1@urgroupname and so on. Default is /ytdl.",
+      "required": false
+    },
+    "PYTDL_COMMAND": {
+      "description": "Enter your custom pytdl command like pytdl1@urgroupname and so on. Default is /pytdl.",
       "required": false
     },
     "SAVE_THUMBNAIL": {

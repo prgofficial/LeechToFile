@@ -35,7 +35,8 @@ from tobrot import (
     DOWNLOAD_LOCATION,
     DESTINATION_FOLDER,
     RCLONE_CONFIG,
-    INDEX_LINK
+    INDEX_LINK,
+    UPLOAD_AS_DOC
 )
 
 from pyrogram import (

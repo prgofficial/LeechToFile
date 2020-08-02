@@ -17,6 +17,7 @@ from pyrogram import (
     Message
 )
 
+
 async def check_size_g(client, message):
     #await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
     del_it = await message.reply_text("🔊 Checking size...wait!!!")
@@ -35,7 +36,9 @@ async def check_size_g(client, message):
     await asyncio.sleep(5)
     await message.reply_text(f"🔊CloudInfo:\n\n{gautam}")
     await del_it.delete()
-    
+
+#gautamajay52
+
 async def g_clearme(client, message):
     inline_keyboard = []
     ikeyboard = []

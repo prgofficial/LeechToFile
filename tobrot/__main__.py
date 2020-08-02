@@ -32,13 +32,14 @@ from tobrot import (
     STATUS_COMMAND,
     SAVE_THUMBNAIL,
     CLEAR_THUMBNAIL,
-    CLEAR_UNDELETED
+    CLEAR_UNDELETED,
+    PYTDL_COMMAND
 )
 
 from pyrogram import Client, Filters, MessageHandler, CallbackQueryHandler
 
 from tobrot.plugins.new_join_fn import new_join_f, help_message_f, rename_message_f
-from tobrot.plugins.incoming_message_fn import incoming_message_f, incoming_youtube_dl_f, incoming_purge_message_f, incoming_gdrive_message_f
+from tobrot.plugins.incoming_message_fn import incoming_message_f, incoming_youtube_dl_f, incoming_purge_message_f, incoming_gdrive_message_f, g_yt_playlist
 from tobrot.plugins.rclone_size import check_size_g, g_clearme
 from tobrot.plugins.status_message_fn import (
     status_message_f,
@@ -83,7 +84,7 @@ if __name__ == "__main__" :
 #    incoming_telegram_download_handler = MessageHandler(
 #        down_load_media_f,
 #        filters=Filters.command([f"{TELEGRAM_LEECH_COMMAND_G}"]) & Filters.chat(chats=AUTH_CHANNEL)
-#    )
+    )
 #    app.add_handler(incoming_telegram_download_handler)
     #
     incoming_purge_message_handler = MessageHandler(
@@ -103,12 +104,18 @@ if __name__ == "__main__" :
         filters=Filters.command([f"{CLEAR_UNDELETED}"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_g_clear_handler)
-    #    
+    #
     incoming_youtube_dl_handler = MessageHandler(
         incoming_youtube_dl_f,
         filters=Filters.command([f"{YTDL_COMMAND}"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_youtube_dl_handler)
+    #
+    incoming_youtube_playlist_dl_handler = MessageHandler(
+        g_yt_playlist,
+        filters=Filters.command([f"{PYTDL_COMMAND}"]) & Filters.chat(chats=AUTH_CHANNEL)
+    )
+    app.add_handler(incoming_youtube_playlist_dl_handler)
     #
     status_message_handler = MessageHandler(
         status_message_f,
