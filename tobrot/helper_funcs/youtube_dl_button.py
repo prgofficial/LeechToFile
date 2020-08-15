@@ -193,7 +193,7 @@ async def youtube_dl_call_back(bot, update):
                     print(e)
                     gaut_am = os.path.basename(e)
                     print(gaut_am)
-                    liop = subprocess.Popen(["mv", f'{e}', "/app"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                    liop = subprocess.Popen(["mv", f'{e}', "/app/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     o, e = liop.communicate()
                     print(o)
                     print(e)
