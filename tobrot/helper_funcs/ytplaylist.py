@@ -21,7 +21,7 @@ from tobrot import (
 )
 
 
-async def yt_playlist_downg(message, i_m_sefg):
+async def yt_playlist_downg(message, i_m_sefg, G_DRIVE):
     url = message.text
     usr = message.from_user.id
     messa_ge = i_m_sefg.reply_to_message
@@ -47,7 +47,7 @@ async def yt_playlist_downg(message, i_m_sefg):
             error_message
         )
         return False, None
-    if os.path.exists('blame_my_knowledge_again.txt'):
+    if G_DRIVE:
         get_g = os.listdir(fol_der)
         print(get_g)
         for ga_u in get_g:
@@ -55,12 +55,11 @@ async def yt_playlist_downg(message, i_m_sefg):
             ta_m = os.path.join(fol_der, ga_u)
             print(ta_m)
             shutil.move(ta_m, './')
-            await upload_to_gdrive(ga_u, i_m_sefg, messa_ge, usr)
+            await upload_to_gdrive(ga_u, i_m_sefg, message, usr)
     else:
         final_response = await upload_to_tg(i_m_sefg, fol_der, usr, {})
         print(final_response)
     try:
         shutil.rmtree(fol_der)
-        os.remove('blame_my_knowledge_again.txt')
     except:
         pass
