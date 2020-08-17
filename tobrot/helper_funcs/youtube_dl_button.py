@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | gautamjay52
+# (c) Shrimadhav U K
 
 # the logging things
 import logging
@@ -39,7 +39,7 @@ async def youtube_dl_call_back(bot, update):
     if current_user_id != current_touched_user_id:
         await bot.answer_callback_query(
             callback_query_id=update.id,
-            text="who are you? 🤪🤔🤔🤔",
+            text="Who are you? 🤪🤔🤔🤔",
             show_alert=True,
             cache_time=0
         )
@@ -86,7 +86,7 @@ async def youtube_dl_call_back(bot, update):
     LOGGER.info(custom_file_name)
     #
     await update.message.edit_caption(
-        caption="trying to download"
+        caption="Trying to Download"
     )
     description = "@PublicLeech"
     if "fulltitle" in response_json:
@@ -177,15 +177,7 @@ async def youtube_dl_call_back(bot, update):
         user_id = update.from_user.id
         #
         print(tmp_directory_for_each_user)
-        G_DRIVE = False
-        txt = update.message.reply_to_message.text
-        print(txt)
-        g_txt = txt.split()
-        print(g_txt)
-        if len(g_txt) > 1:
-            if g_txt[1] == "gdrive":
-                G_DRIVE = True
-        if G_DRIVE:
+        if os.path.exists('blame_my_knowledge.txt'):
             for a, b, c in os.walk(tmp_directory_for_each_user):
                 print(a)
                 for d in c:
@@ -225,6 +217,7 @@ async def youtube_dl_call_back(bot, update):
         #
         try:
             shutil.rmtree(tmp_directory_for_each_user)
+            os.remove('blame_my_knowledge.txt')
         except:
             pass
         #
