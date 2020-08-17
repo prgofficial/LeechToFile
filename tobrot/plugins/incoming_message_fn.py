@@ -103,17 +103,13 @@ async def incoming_message_f(client, message):
 
 async def incoming_youtube_dl_f(client, message):
     """ /ytdl command """
-    i_m_sefg = await message.reply_text("processing", quote=True)
+    i_m_sefg = await message.reply_text("**ProcessinG..**", quote=True)
     # LOGGER.info(message)
     # extract link from message
     dl_url, cf_name, yt_dl_user_name, yt_dl_pass_word = await extract_link(
         message.reply_to_message, "YTDL"
     )
     LOGGER.info(dl_url)
-#    if len(message.command) > 1:
-#        if message.command[1] == "gdrive":
-#            with open('blame_my_knowledge.txt', 'w+') as gg:
-#                gg.write("I am noob and don't know what to do that's why I have did this")
     LOGGER.info(cf_name)
     if dl_url is not None:
         await i_m_sefg.edit_text("extracting links")
@@ -131,14 +127,9 @@ async def incoming_youtube_dl_f(client, message):
             yt_dl_pass_word,
             user_working_dir
         )
-        print(thumb_image)
-        req = requests.get(f"{thumb_image}")
-        gau_tam = f"{current_user_id}.jpg"
-        open(gau_tam, 'wb').write(req.content)
         if thumb_image is not None:
             await message.reply_photo(
-                #text_message,
-                photo=gau_tam,
+                photo=thumb_image,
                 quote=True,
                 caption=text_message,
                 reply_markup=reply_markup
@@ -154,15 +145,12 @@ async def incoming_youtube_dl_f(client, message):
             "**FCUK**! wat have you entered. \nPlease read /help \n"
             f"<b>API Error</b>: {cf_name}"
         )
+
 #playlist
 async def g_yt_playlist(client, message):
     """ /pytdl command """
-    #i_m_sefg = await message.reply_text("Processing...you should wait🤗", quote=True)
     usr_id = message.from_user.id
     G_DRIVE = False
-#    if len(message.command) > 1:
-#        if message.command[1] == "gdrive":
-#            G_DRIVE = True
     if 'youtube.com/playlist' in message.reply_to_message.text:
         i_m_sefg = await message.reply_text("Downloading all videos from given playlist. Please wait! 🥱", quote=True)
         await yt_playlist_downg(message.reply_to_message, i_m_sefg, G_DRIVE)
