@@ -43,6 +43,21 @@ async def status_message_f(client, message):
     DOWNLOAD_ICON = "⬇️"
     UPLOAD_ICON = "⬆️"
     #
+    msg = ""
+    for download in downloads:
+        downloading_dir_name = "NA"
+        try:
+            downloading_dir_name = str(download.name)
+        except:
+            pass
+        total_length_size = str(download.total_length_string())
+        progress_percent_string = str(download.progress_string())
+        down_speed_string = str(download.download_speed_string())
+        up_speed_string = str(download.upload_speed_string())
+        download_current_status = str(download.status)
+        e_t_a = str(download.eta_string())
+        current_gid = str(download.gid)
+        #
         msg += f"<u>{downloading_dir_name}</u>"
         msg += " | "
         msg += f"{total_length_size}"
