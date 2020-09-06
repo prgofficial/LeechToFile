@@ -31,7 +31,7 @@ from tobrot import (
     SAVE_THUMBNAIL,
     CLEAR_THUMBNAIL,
     CLEAR_UNDELETED,
-    PYTDL_COMMAND_G,
+    PYTDL_COMMAND,
     LOG_COMMAND
 )
 
