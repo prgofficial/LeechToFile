@@ -96,6 +96,14 @@
       "description": "Enter your custom cancel command like cancel@urgroupname and so on. Default is /cancel.",
       "required": false
     },
+    "STATUS_COMMAND": {
+      "description": "Custom status command to see the torrent status and disk storage details. Default is /status.",
+      "required": false
+    },
+    "LOG_COMMAND": {
+      "description": "Custom log command to see the recent logs. Default is /getlog.",
+      "required": false
+    },
     "CUSTOM_FILE_NAME": {
       "description": "fill with name u want to prefix the file name like ur channel username🙊, keep empty for do nothing, but add to ur config vars even without input.",
       "required": false
