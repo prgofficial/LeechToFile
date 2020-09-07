@@ -31,7 +31,8 @@ from tobrot import (
     SAVE_THUMBNAIL,
     CLEAR_THUMBNAIL,
     CLEAR_UNDELETED,
-    PYTDL_COMMAND
+    PYTDL_COMMAND,
+    LOG_COMMAND
 )
 
 from pyrogram import Client, Filters, MessageHandler, CallbackQueryHandler
@@ -43,8 +44,8 @@ from tobrot.plugins.status_message_fn import (
     status_message_f,
     cancel_message_f,
     exec_message_f,
-    upload_document_f
-    #eval_message_f
+    upload_document_f,
+    upload_log_file
 )
 from tobrot.plugins.call_back_button_handler import button
 from tobrot.plugins.custom_thumbnail import (
@@ -140,7 +141,15 @@ if __name__ == "__main__" :
     )
     app.add_handler(eval_message_handler)
     '''
+
     #
+    upload_log_handler = MessageHandler(
+        upload_log_file,
+        filters=Filters.command([f"{LOG_COMMAND}"]) & Filters.chat(chats=AUTH_CHANNEL)
+    )
+    app.add_handler(upload_log_handler)
+    #
+    
     rename_message_handler = MessageHandler(
         rename_message_f,
         filters=Filters.command(["rename"]) & Filters.chat(chats=AUTH_CHANNEL)
