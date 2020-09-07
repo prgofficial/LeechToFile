@@ -87,8 +87,8 @@ async def status_message_f(client, message):
     free = humanbytes(free)
 
     ms_g = f"<b>BOT Uptime</b> : {currentTime}\n\n" \
-        f"<b>DISK</b> : {used} / {total}\n" \
-        f"{free} left\n"
+        f"<b>DISK : {used} / {total}</b>\n" \
+        f"<b>Free</b> : {free} left\n"
 
 
     msg = ms_g + "\n" + msg
