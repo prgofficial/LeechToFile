@@ -1,4 +1,4 @@
-# Telegram Torrent Leecher 🔥🤖
+# Telegram Torrent Leecher 🔥🤖 [OLD PYRO]
 
 ### A Telegram Torrent (and youtube-dl) Leecher based on [Pyrogram](https://github.com/pyrogram/pyrogram)
 
@@ -27,7 +27,7 @@
 
 ### The Easy Way
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/prgofficial/LeechToFile)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/prgofficial/LeechToFile/tree/old-pyro)
 
 
 ### The Legacy Way
