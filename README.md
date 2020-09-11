@@ -27,8 +27,7 @@
 
 ### The Easy Way
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/prgofficial/LeechToFile)
-
+Heroku Support removed temporarily!! 
 
 ### The Legacy Way
 
