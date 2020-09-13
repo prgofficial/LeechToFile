@@ -27,7 +27,7 @@
 
 ### The Easy Way
 
-Heroku Support removed temporarily!! 
+Heroku Support removed temporarily!! Dont deploy, You'll get ban :(
 
 ### The Legacy Way
 
